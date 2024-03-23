@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "main main main main"
+    "section section form form"
+    "footer footer footer footer";
+}
+
+/* NAV */
+nav {
+  background-color: #1b1b1b;
+  grid-area: nav;
+  width: auto;
+  overflow: hidden;
+  border-bottom: 1px solid #B0E298;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+}
+
+nav .logo {
+  height: 120px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  margin: 30px;
+}
+
+.nav-btn {
+  padding: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #FC9F5B;
+  border: 3px solid #ff70a6;
+  border-radius: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #1b1b1b;
+}
+
+/* HEADER */
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./heroimage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.line-up {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.event-card {
+  animation: fadeIn 1.5s;
+  text-align: center;
+  margin: 50px;
+  width: 300px;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-style: italic;
+  padding: 10px;
+  color: #ff70a6;
+}
+
+h2 {
+  font-size: 2.188rem;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0px 20px 0px 20px;
+  color: #FC9F5B;
+}
+
+.diamond {
+  color: #ff70a6;
+}
+
+.event-card p {
+  line-height: 2.0;
+  margin: 10px;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+}
+
+/* TICKETS */
+main {
+  grid-area: main;
+  background-image: url("./ticketbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-top: 3px solid #ff70a6;
+  border-bottom: 3px solid #ff70a6;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: wheat;
+  text-shadow: 3px 3px 2px rgba(58, 37, 21, 1);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.tickets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: auto;
+  margin: 0px;
+  padding: 50px;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.ticket-card {
+  height: auto;
+  width: 300px;
+  padding: 20px;
+  margin: 50px;
+  border: 1px solid black;
+  background-color: #6883BA;
+  border-radius: 10px;
+}
+
+#third-card {
+  background-color: #C8B8DB;
+}
+
+#fourth-card {
+  background-color: #70587C;
+}
+
+h3 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h3,
+h4 {
+  margin-bottom: 5px;
+}
+
+h4,
+p {
+  font-size: 1.25rem;
+}
+
+.learn-more {
+  text-decoration: none;
+  color: white;
+}
+
+.ticket-btn {
+  background-color: #1b1b1b;
+  font-size: 1.25rem;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Black Ops One", system-ui;
+  color: #FC9F5B;
+}
+
+/* SECTION IMAGE */
+.playlist {
+  grid-area: section;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./footerimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border-right: 3px solid #ff70a6;
+}
+
+.section-form {
+  grid-area: form;
+  height: 20rem;
+  width: auto;
+  background-color: #3D3B8E;
+  object-fit: contain;
+  padding: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.563rem;
+  border: 20px solid #6883BA;
+}
+
+/* SECTION FORM */
+.form-p {
+  padding: 10px;
+}
+
+.section-form input {
+  border-radius: 10px;
+}
+
+.section-form button {
+  border-radius: 10px;
+}
+
+.firstname,
+.lastname {
+  background-color: #FC9F5B;
+  padding: 20px 20px;
+  margin: 20px 0px;
+  font-size: 1.25rem;
+}
+
+.email {
+  background-color: #FC9F5B;
+  padding: 20px;
+  margin: 0px;
+  font-size: 1.25rem;
+}
+
+.form-btn {
+  margin: 0px;
+  border: none;
+  padding: 20px;
+  font-size: 1.25rem;
+  background-color: #1b1b1b;
+  color: #FC9F5B;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  grid-area: footer;
+  border-top: 3px solid #B0E298;
+  padding-left: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  color: #B0E298;
+}
+
+.footerlogo {
+  width: 125px;
+  height: 125px;
+}
+
+.footer-nav {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+
+.footer-links {
+  list-style-type: none;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-signup {
+  flex: 1;
+  align-items: flex-end;
+}
+
+.ftrsignup-container {
+  padding: 0px 40px;
+  text-align: end;
+}
+
+.footer-signup i {
+  color: #FC9F5B;
+  font-size: 1.875rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.footer-signup p {
+  color: #ffffff;
+  font-size: 1.125rem;
+  padding: 10px;
+}
+
+.footer-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ff70a6;
+  width: 75%;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1b1b1b;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+/* LINk EFFECTS */
+a:hover {
+  color: #B0E298;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+
+  .grid-container {
+    width: 100vw;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "section"
+      "form"
+      "footer";
+  }
+
+  .top-bar,
+  .nav-items,
+  .line-up,
+  .tickets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-items li {
+    margin: 5px;
+  }
+
+  .nav-btn {
+    margin: 20px;
+  }
+
+  .main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: wheat;
+    text-shadow: 3px 3px 2px rgba(58, 37, 21, 1);
+  }
+
+  .line-up,
+  .event-card {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .top-bar {
+    padding-bottom: 20px;
+  }
+
+  .section-form {
+    padding: 10px;
+  }
+
+  .firstname,
+  .lastname,
+  .email {
+    padding: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+
+  .ftrsignup-container {
+    text-align: center;
+    padding: 10px;
+  }
+}
